@@ -1,16 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
 
 import lightOn from "./img/light-on.svg";
 import lightOff from "./img/light-off.svg";
 
-const Light = ({ name }) => (
-  <div className="light">
-    <div className="light__icon">
-      <img src={lightOff} />
+const Light = ({ name, state }) => {
+  const [lightState, setLightState] = useState({ state });
+
+  return (
+    <div
+      className="light"
+      onClick={() => {
+        setLightState(lightState === "on" ? "off" : "on");
+        /* console.log(lightState);
+        console.log(state); */
+      }}
+    >
+      <div className="light__icon">
+        <img src={lightState === "on" ? lightOn : lightOff} />
+      </div>
+      <div className="light__name">{name}</div>
     </div>
-    <div className="light__name">{name}</div>
-  </div>
-);
+  );
+};
 
 export default Light;

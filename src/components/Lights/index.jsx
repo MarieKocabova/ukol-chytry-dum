@@ -5,7 +5,7 @@ import "./style.css";
 const Lights = ({ data }) => (
   <div className="lights">
     {data.lights.map((light, id) => {
-      return <Light name={light.name} key={id} />;
+      return <Light name={light.name} state={light.state} key={id} />;
     })}
   </div>
 );
