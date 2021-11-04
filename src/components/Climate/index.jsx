@@ -9,7 +9,7 @@ const Climate = ({ temp, humidity }) => {
   return (
     <div className="climate">
       <div className="climate__icon">
-        <img src={tepm} />
+        <img src={tepm} alt="Ikona teploměru"/>
       </div>
       <div className="climate__content">
         <div className="climate__temperature">{degree}&deg;C</div>
@@ -20,7 +20,6 @@ const Climate = ({ temp, humidity }) => {
           className="button"
           onClick={() => {
             setDegree((degree) => degree + 1);
-            console.log(degree);
           }}
         >
           +
@@ -29,7 +28,6 @@ const Climate = ({ temp, humidity }) => {
           className="button"
           onClick={() => {
             setDegree((degree) => degree - 1);
-            console.log(degree);
           }}
         >
           -

@@ -10,7 +10,7 @@ const Dashboard = ({ data }) => (
   <main className="dashboard">
     <Lights data={data} />
     <Climate temp={data.climate.temperature} humidity={data.climate.humidity} />
-    <Blinds blinds={data.blinds}/>
+    <Blinds blinds={data.blinds} />
     <Energy electricity={data.energyConsumption.electricity} water={data.energyConsumption.water} />
   </main>
 );

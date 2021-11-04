@@ -12,12 +12,10 @@ const Light = ({ name, state }) => {
       className="light"
       onClick={() => {
         setLightState(lightState === "on" ? "off" : "on");
-        /* console.log(lightState);
-        console.log(state); */
       }}
     >
       <div className="light__icon">
-        <img src={lightState === "on" ? lightOn : lightOff} />
+        <img src={lightState === "on" ? lightOn : lightOff} alt={lightState === "on" ? "Rozsvícená žárovka" : "Zhasnutá žárovka"} />
       </div>
       <div className="light__name">{name}</div>
     </div>
